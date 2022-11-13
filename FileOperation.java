@@ -20,6 +20,19 @@ class FileOperation{
 			System.out.println("Error occured");
 		}
 
+		try{
+			Reader fileRead = new FileReader("sampleFile.txt");
+			int data = fileRead.read();
+			while(data != -1){
+				System.out.print((char)data);
+				data = fileRead.read();
+			}
+			fileRead.close();
+		}catch(Exception b){
+			System.out.println("Error occured");
+		}
+		
+
 
 
 	}
